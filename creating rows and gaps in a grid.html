@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating rows and gaps in a grid</title>
+    <style>
+
+        .grid{
+            display:grid;
+
+            /* this is how you manipulate with rows */
+            grid-template-rows: 1fr 1fr 4fr;
+            /* if you want to set the remaining rows there is this property */
+            grid-auto-rows: 3fr; /* this property will set the remaining rows to 3fr fr menans fraction  */
+
+            grid-template-columns: 1fr 4fr 2fr;
+             grid-gap: 1rem; 
+
+        }
+        .box{
+
+            background-color: brown;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="box">this is box-1</div>
+        <div class="box">this is box-2</div>
+        <div class="box">this is box-3</div>
+        <div class="box">this is box-4</div>
+        <div class="box">this is box-5</div>
+        <div class="box">this is box-6</div>
+        <div class="box">this is box-7</div>
+        <div class="box">this is box-8</div>
+        <div class="box">this is box-9</div>
+        <div class="box">this is box-10</div>
+        <div class="box">this is box-11</div>
+        <div class="box">this is box-12</div>
+        <div class="box">this is box-13</div>
+        <div class="box">this is box-14</div>
+        <div class="box">this is box-15</div>
+    </div>
+</body>
+</html>

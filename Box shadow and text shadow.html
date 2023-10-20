@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and text shadow</title>
+    <style>
+        .container {
+            display: flex;
+
+        }
+
+        .card {
+            padding: 23px 12px;
+            margin: 23px 12px;
+            /* border: 2px solid black; */
+            background-color: antiquewhite;
+            /* box-shadow: x-axis y-axis blur-radius color; */
+            /* box-shadow: 10px 13px blue; */
+            /* box shadow is used to bring shadows to the box and we can also use negative values */
+             /* box-shadow: 10px 13px 14px black; */
+             /* box-shadow: x-axis y-axis blur-radius spread-radius; */
+            /* box-shadow: 10px 13px 14px 15px black; */
+
+            /* there is rgb and there is rgba where a is alpha it works kind of how much of a dark color you want  */
+
+            /* To make the shadows inward we use inset keyword with same syntax */
+            /* box-shadow: inset 10px 13px black; */
+
+
+            /* we can also add multiple box shadows same syntax just comma separated */
+            box-shadow: inset 10px 13px black, inset 15px 16px green;
+
+        }
+
+        .card h2{ 
+
+            /* we can also add text shadows using the below mentioned syntax with above mentioned properties*/
+
+            /* text-shadow: 3px 5px white; */
+            text-shadow: 3px 5px 6px red;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>Card1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur vel esse perferendis excepturi itaque,
+                delectus id animi deserunt saepe quibusdam. Sed officiis vel dolor eius deleniti quod itaque, voluptatem
+                ratione.
+            </p>
+        </div>
+        <div class="card" id="card2">
+            <h2>Card2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur vel esse perferendis excepturi itaque,
+                delectus id animi deserunt saepe quibusdam. Sed officiis vel dolor eius deleniti quod itaque, voluptatem    
+                ratione.
+            </p>
+        </div>
+        <div class="card" id="card3">
+            <h2>Card3</h2>
+            <p>
+                Lorem ipsum dolor sit a met consectetur adipisicing elit. Pariatur vel esse perferendis excepturi itaque,
+                delectus id animi deserunt saepe quibusdam. Sed officiis vel dolor eius deleniti quod itaque, voluptatem
+                ratione.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

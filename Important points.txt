@@ -1,0 +1,109 @@
+Day 1
+------------------------------------------------------------------------------------------------------------------------
+Inline CSS have more precednece then internal and external css.
+Internal and external css have no concept of precedence only that if one things comes later it will be implemented.
+
+4 types of selectors
+element 
+id
+class
+group 
+id selector is used to select one unique element. 
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Day 2
+
+-------------------------------------------------------------------------------------------------------------------------
+font family.
+web safe fonts already built in.
+web fonts needed to be imported.
+font family keyword also act as font stack where if one font style is unavailable use next one.
+for importing fonts google fonts is the best go to their website for linking. 
+color by name, rgb and hex value.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Day 3
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Not much to be noted
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Day 4
+
+-------------------------------------------------------------------------------------------------------------------------
+
+box padding margin
+
+3 stage architecture
+working directory
+staging area 
+git directory
+
+stage->commit
+
+
+git status
+git init
+
+git add --a (bring all files in staging area)
+
+git commit -m "Initial Commit"
+
+git log (to know all the commits)
+
+git add first.txt
+
+git commit -m "changed first.txt and added better design"
+
+------------------------------------------------------------------------------------------------------------------------
+
+Day 5
+
+-----------------------------------------------------------------------------------------------------------------------
+
+float and clear
+
+rm -rf .git (to delete git repoitory)
+
+git clone url  (get url from git repository from online)
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Git:
+
+-----------------------------------------------------------------------------------------------------------------------
+
+file status lifecycle
+git init
+untracked
+
+gitadd --a (adding into staging area)   unmodified (now tracking)
+
+after editing files get modified
+
+gitadd (staged)
+
+
+Ignoring Files in Git
+
+touch error.log
+touch .gitignore
+(write error.log in .gitignore or *.log to ignore all files ending with .log)
+dir/  (writing directories as)
+
+
+
+
+
+
+
+
+
+
+

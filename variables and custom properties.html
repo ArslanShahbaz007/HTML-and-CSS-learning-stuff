@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css variables and custom properties</title>
+    <style>
+
+        :root{
+
+            /* if we want to make a global variable whose scope is all the classes we difine such variable in this class :root and these variables in return can be used anywhere */
+
+            --bordercolor:black;
+            --maxwidth:100%;
+            --maxheight:100vh;
+        }
+        .container{
+            display: flex;
+            background-color: aqua;
+            width: var(--maxwidth);
+            height: var(--maxheight);
+
+            justify-content: center;;
+            align-items: center;
+            
+
+        }
+        .box{
+             
+            /* if we want to create local variables whose scope is defined only to this class than we use the following syntax. Besides this these local variables can be used to store width heights and colors. */
+            --boxcolor:brown;  /* here boxcolor is the name of the variable we only need to add -- before it to make it work */
+            width: 200px;
+            height: 200px;
+
+            /* we can use the above variable in followinig manner: */
+
+            border: 2px solid var(--bordercolor);
+            background-color: var(--boxcolor);
+            margin: 10px 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

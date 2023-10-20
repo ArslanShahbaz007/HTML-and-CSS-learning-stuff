@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Pseudoselectors</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            /* Here we dont often use this technique to set our background image as its opacity is high because
+            of which it get difficult to read the text on it there for before pseudo selector
+            technique mentioned below is the best and most usable technique to set a background image 
+            with right amount of opacity
+            background: url('https://source.unsplash.com/random') no-repeat center center/cover; */
+        }
+        
+        /* Using pseudo selector before in this way is the best technique to set background images with right amount of opacity */
+        body::before{
+            content: "";
+            background: url('https://source.unsplash.com/random') no-repeat center center/cover;
+            position: absolute;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            top:0;
+            left:0;
+            opacity: 0.4;
+        }
+
+        .navigation {
+
+            display: flex;
+            font-size: 24px;
+        }
+
+        section {
+            height: 344px;
+            display: flex;
+            margin: 3px 23px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid red; */
+        }
+
+        li {
+            list-style: none;
+            padding: 34px 23px;
+        }
+
+        /* If i want to add content before section i can do it using the method below */
+        /* section:before {
+            content: "this is a content";
+        } */
+
+        /* If a person wants to add content after section */
+        /* section:after {
+            content: "this is a content";
+        } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+
+            <ul class="navigation">
+                <li class="listitems">Home</li>
+                <li class="listitems">About</li>
+                <li class="listitems">Services</li>
+                <li class="listitems">Contact Us</li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <section>
+        <h1>Welcome to coding world</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aut, distinctio nam, voluptatum impedit,
+            at odio ipsum est sapiente repellendus repudiandae ducimus. Dolores et atque, itaque eligendi
+            reprehenderit porro! Est, optio, natus voluptate accusantium, vel maxime nisi temporibus voluptatibus ut
+            adipisci blanditiis? Ipsum cupiditate dicta totam? Cupiditate delectus aperiam voluptatibus ullam esse
+            amet odit deleniti quisquam provident nostrum quia illum adipisci et aliquid enim, officiis dignissimos
+            eos animi asperiores recusandae non veniam laboriosam quibusdam. Hic vel veritatis delectus voluptatibus
+            cupiditate. Temporibus aliquam soluta, saepe voluptas, et doloremque nisi animi est cupiditate nobis
+            tempore quam suscipit dolores sit! Quae illo beatae veritatis nisi sequi tempore doloremque blanditiis
+            maxime. Aspernatur architecto ab tempora esse laboriosam!</p>
+    </section>
+
+    <!-- <hr> -->
+</body>
+
+</html>

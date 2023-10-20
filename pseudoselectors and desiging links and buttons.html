@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors and Designing Links and Buttons</title>
+    <style>
+    .container{
+        border:2px solid black;
+        background-color: rgb(198, 235, 222);
+        margin: 34px auto;
+        padding: 34px;
+        width: 666px;
+
+    }
+    a{
+         text-decoration: none;    /* to remove underline from anchor */
+         color: black;
+    }
+    /* This is an example of pseudo selectors */
+    a:hover{
+        color:bisque;
+        background-color: black;
+        border:2px solid black;
+
+    }
+    /* a:visited{
+        color:blue;
+    } */
+    /* active is when you click the button */
+    a:active{
+        background-color: blue;
+        
+    }
+    .btn{
+        background-color: rgb(235, 144, 144);
+        font-weight: bold;
+        padding:6px;
+        border: none;
+        cursor:pointer; /*  makes a pointer when cursor is above it */
+        font-size: 13px;
+        border-radius: 6px;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="container" id="cont1">
+        <h1>This is a heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione non obcaecati sapiente sed repudiandae commodi exercitationem nam tempora in? Odit quo delectus error iure ipsa adipisci facere aperiam minus quas.</p> 
+        <a href="" class="btn">Read More</a>
+        <button class="btn">Contact Us</button>
+    </div>
+</body>
+</html>

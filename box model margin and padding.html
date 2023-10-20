@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model margin and padding</title>
+    <style>
+
+      /* universal selector */
+      *{
+         box-sizing: border-box;
+         margin:0;
+         padding:0;
+      }
+      body{
+         background-color: beige;
+      }
+     .container{
+        background-color: rgb(194, 178, 178); 
+        border: 3px solid black;
+        padding: 19px;
+        margin: 34px;
+        /* padding-top: 19px;
+        padding-bottom: 19px;
+        padding-left: 19px;
+        padding-right: 19px; */
+        
+        /* margin-top: 34px;
+        margin-bottom: 34px;
+        margin-left: 34px;
+        margin-right: 34px; */
+        
+        /* padding:19px 19px 19px 19px; padding: top right bottom left; */
+        /* same for margin */
+
+        /* padding: 34px 34px;padding: y(top/bottom) x(right/left); */
+        /* same for margin */
+
+        border-radius: 23px;
+        width: 233px;
+        /* when we use padding and margin with specific width it gets change automatically to stop this we use property mentioned below  */
+        
+
+
+
+     }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <h1>this is the first heading</h1>
+        <p id="first">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos nemo officia nesciunt, unde dolores corrupti enim accusamus cum quasi similique temporibus? Ab, aliquid officia minima magni commodi possimus nesciunt tempore.</p>
+     </div>
+     <div class="container">
+        <h1>this is the first heading</h1>
+        <p id="second">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos nemo officia nesciunt, unde dolores corrupti enim accusamus cum quasi similique temporibus? Ab, aliquid officia minima magni commodi possimus nesciunt tempore.</p>
+     </div>
+     <div class="container">
+        <h1>this is the first heading</h1>
+        <p id="third">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos nemo officia nesciunt, unde dolores corrupti enim accusamus cum quasi similique temporibus? Ab, aliquid officia minima magni commodi possimus nesciunt tempore.</p>
+     </div>
+</body>
+</html>

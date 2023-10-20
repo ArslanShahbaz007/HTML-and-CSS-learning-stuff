@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction and creating a basic grid</title>
+    <style>
+
+        .container{
+            /* grid is used to design layouts it is similar to flex but different in many ways that we will see */
+            display:grid;
+
+            /* this property grid template columns divide the wholescreen into columns and fit items in it.  */
+            /* grid-template-columns: 300px 100px 100px; */
+
+
+            /* we can also use auto if we want to just let the system to decide the size of each columns */
+            /* grid-template-columns: auto auto auto auto; */
+
+            /* instead of pixels we can also use fr as a unit it works as a ratio to divide the screen */
+            /* grid-template-columns: 1fr 4fr 1fr; */
+
+
+            /* if we want to divide the screen into too many columns than we can use the function repeat */
+            grid-template-columns: repeat(10,auto);
+
+
+
+            /* we can also add grip gap if just works like margin */
+
+            grid-gap: 3rem;
+
+
+            /* besides all this we can add padding and margin in grid items according to our design */
+
+        }
+
+        .box{
+
+            /* height:100px;
+            width: 100px; */
+            background-color: blueviolet;
+            margin: 3px;
+
+            padding: 15px 5px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">this is box 1</div>
+        <div class="box">this is box 2</div>
+        <div class="box">this is box 3</div>
+        <div class="box">this is box 4</div>
+        <div class="box">this is box 5</div>
+        <div class="box">this is box 6</div>
+        <div class="box">this is box 7</div>
+        <div class="box">this is box 8</div>
+        <div class="box">this is box 9</div>
+        <div class="box">this is box 1</div>
+        <div class="box">this is box 2</div>
+        <div class="box">this is box 3</div>
+        <div class="box">this is box 4</div>
+        <div class="box">this is box 5</div>
+        <div class="box">this is box 6</div>
+        <div class="box">this is box 7</div>
+        <div class="box">this is box 8</div>
+        <div class="box">this is box 9</div>
+    </div>
+</body>
+</html>

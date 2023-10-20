@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+    <style>
+        /* when this signed is used it means that after div when directly there is p do this css. Mind that it is 
+        very important that after div and it must be open that means div must be open and not closed
+         if there is p else it will not be applied */
+
+         /* In short words if p is right inside div or div is parent of p */
+     /* div > p{
+           
+        background-color: blueviolet;
+
+     } */
+
+      
+
+     /* Here target those paragraphs whose parent is div that means first see p and if it is under div element
+        that means div must open and close than if there is p use the css */
+
+        /* In short words if p is right after div that means p is the next sibling of div */
+     div + p{
+
+
+        background-color: brown;
+     }
+    </style>
+</head>
+<body>
+    <div>
+       
+        <ul>
+            <li>This is a list element</li>
+            <p>This is also a para</p>
+        </ul>
+        <p>
+            This is a para
+        </p>
+    </div>
+    <p>
+        This is also a paragraph
+    </p>
+</body>
+</html>

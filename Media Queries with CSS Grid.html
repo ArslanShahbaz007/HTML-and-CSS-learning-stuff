@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries with CSS Grid</title>
+    <style>
+
+        .container{
+            display:grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar '
+            'section section section aside'
+            'footer footer footer footer'
+            ;
+
+        }
+
+        nav{
+
+            grid-area: navbar;
+
+        }
+        section{
+            grid-area:section;
+        }
+        aside{
+
+            grid-area: aside;
+        }
+        footer{
+
+            grid-area:footer;
+        }
+
+        .styling{
+
+            border: 2px solid black;
+            background-color: antiquewhite;
+        }
+
+        @media only screen and (max-width:300px)
+        {
+            body{
+                background-color: aqua;
+            }
+            .container{
+                grid-template-areas: 
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'footer footer footer footer ';
+            }
+            aside{
+
+                display:none;
+            }
+            span{
+                display:block;
+                text-align: center;
+            }
+
+        }
+        @media only screen and (min-width:300px) and (max-width:500px)
+        {
+            body {
+            background-color: blue;
+        }
+        .container {
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'footer footer footer footer ';
+        }
+        aside{
+            display: none;
+        }
+        span{
+            display: block;
+            text-align: center;
+        }
+
+        @media (min-width: 500px) and (max-width:800px) {
+        body {
+            background-color: yellow;
+        }
+
+        .container {
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'footer footer footer footer ';
+        }
+        span{
+            display: block;
+            text-align: center;
+        }
+    }
+
+    @media (min-width: 800px) {
+        body {
+            background-color: green;
+        }
+    }
+
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <nav class="styling">
+
+            <span>Home</span>
+            <span>Aout Us</span>
+            <span>Services</span>
+            <span>Contact Us</span>
+
+        </nav>
+        <section class="styling">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nisi suscipit dicta ullam et similique eligendi, alias saepe eveniet? Dignissimos quod iure laboriosam soluta perferendis corrupti aliquid architecto unde autem, voluptatum saepe quis sint iste ea dolore nam nemo rerum! Numquam praesentium pariatur, modi cupiditate error, reiciendis sunt aperiam odit officiis impedit laboriosam ad itaque? Quia vitae consectetur, recusandae quam neque tenetur adipisci! Vero libero culpa delectus consequatur hic repudiandae atque iusto, sed inventore sit numquam expedita dicta tempora quis nostrum possimus eligendi. Facere sint perferendis quo doloribus laborum dolorum! Eligendi tempora omnis provident. Reiciendis, consectetur doloremque eius quidem officia facere tenetur quaerat, molestias voluptate natus consequuntur dolorum corrupti soluta magni suscipit officiis eligendi eaque dolores! Ducimus maiores sit saepe nobis ab? Recusandae dolor laudantium, sunt at nulla repellat alias? Sint, ipsam? Eos dolorem ipsam neque enim labore a. Deserunt deleniti aperiam qui eaque vero laborum dolores voluptatem id voluptatum recusandae corporis ipsa quam dolore officiis, in accusamus sunt facere repellat sequi! Officia eum dolore quidem, possimus doloribus cumque corporis placeat. Iure quia beatae blanditiis earum animi modi dicta neque nobis voluptate asperiores voluptas minus, consequuntur, quod quas, nemo aperiam reprehenderit. Tempore nisi laboriosam sapiente quia dolore deserunt quisquam dignissimos ducimus similique, mollitia libero maxime modi reprehenderit nulla placeat. Eos, fugiat laboriosam deleniti in tempore dolorem nobis voluptatibus quaerat consequuntur laborum sed sunt expedita eveniet enim. Quis possimus enim excepturi officiis molestias libero ratione fuga ipsum vel ducimus, incidunt odit ipsam fugit laborum aspernatur. Pariatur amet aperiam quis consequuntur velit.</p>
+
+        </section>
+        <aside class="styling">
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias labore, non nesciunt tempore quos, dolore doloremque quam obcaecati quis voluptatem minus ex expedita corrupti itaque culpa nemo accusantium quasi, eveniet reiciendis libero iste. Magni dolor impedit similique sed dolores asperiores quam accusantium repellendus fugiat, cum facere eaque velit temporibus iure tenetur ea quibusdam! Voluptates sunt totam perferendis quidem quisquam placeat et voluptatum odit delectus recusandae impedit voluptas, dolorum nemo aliquid iure? Tempore reprehenderit quibusdam qui adipisci inventore, quam aliquam est delectus ad facere perferendis veniam sint quidem explicabo rem eos autem ipsam accusantium tenetur aliquid illum dicta similique nostrum cupiditate! Ea quo amet asperiores, libero tenetur dolorem minus voluptas blanditiis exercitationem praesentium laudantium quam magni nobis consectetur pariatur? Facere fuga temporibus rerum dolore eaque, doloribus, deserunt at consequatur, numquam veritatis nesciunt laudantium omnis ullam quidem! Eos culpa dignissimos dicta ut eaque quod, dolore cum, ipsum quidem maxime doloremque dolorum dolores exercitationem vero saepe facere ad quae illum expedita est adipisci magni nemo? Ipsam doloremque natus dolorum sapiente animi consequatur sunt repellat! Sit illo officiis rerum aperiam eos esse, pariatur perferendis reprehenderit laudantium nesciunt obcaecati aliquam inventore iste vero earum. Saepe repudiandae veritatis nostrum repellendus pariatur ratione aut facilis, nam illo?</p>
+
+        </aside>
+        <footer class="styling">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, at. Fugit ipsum minima labore!</p>
+    
+        </footer>
+        
+    </div>
+    
+</body>
+</html>

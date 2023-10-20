@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Animations and keyframes</title>
+</head>
+<style>
+
+    .container{
+
+        background-color: blueviolet;
+    }
+
+    .box{
+        width: 250px;
+        height: 250px;
+        background-color: aqua;
+
+        /* below is the standard syntax to make animations */
+        /* Firstly you always make the position relative */
+        position:relative;
+        /* then you give the name to the animation you want to create */
+        animation-name: myfirst;
+        /* then you tell the duration of the animation */
+        animation-duration: 2s;
+        /* then you tell the iteration count of the animation */
+        animation-iteration-count: 3;
+
+        /* after setting these properties on the container where you want to add the animation using keyframe property you actually do the animation outside of this class */
+
+
+        /* some of the below mentioned properties of animations are icing on the top and can be used in various assignments  */
+
+
+        /* If we use animation fill mode as forwards than the box animation will not come to its original space after completion */
+        
+        /* animation-fill-mode: forwards; */
+
+        /* if we use alternate instead it will come back to its original position */
+
+        /* animation-fill-mode: alternate; */
+
+
+
+
+        /* Then there is another property named as animation timing function which helps us animate a little more good */
+
+        /* animation-timing-function: ease;   will fill container normally */
+        /* animation-timing-function: ease-in;   initally will fill container with ease then inc speed */
+
+        /* animation-timing-function: ease-in-out; */
+        /* animation-timing-function: ease-out; */
+
+
+        /* we can also put a delay at the starting of the animation by using animation delay */
+        /* animation-delay: 3s; */
+
+
+        /* we can also work around with the animation direction  */
+
+        /* animation-direction: reverse; */
+
+
+
+        /* we can create another animation using different name with same above properties */
+        animation-name: mysecond;
+
+
+
+
+    }
+
+
+    @keyframes  mysecond{
+
+
+        /* we can add animations like this where we breakdown the animation time and specify what we want to do at the specific time  */
+        0%{
+            top:0px;
+            left:0px;
+
+        }
+
+        25%{
+
+            top:250px;
+            left:0px;
+
+
+        }
+
+        75%{
+
+            left:250px;
+            top:250px;
+
+        }
+
+        100%{
+            top:0px;
+            left:0px;
+
+        }
+
+    }
+    @keyframes myfirst {
+
+        from{
+
+            width: 200px;
+
+        }
+
+        to{
+
+            width:400px;
+
+
+        }
+        
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+    </div>
+</body>
+</html>

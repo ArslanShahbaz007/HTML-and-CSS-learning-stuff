@@ -1,0 +1,79 @@
+<!-- Various ways to achieve responsive design
+1: Use max width/height
+2:Using CSS media queries
+3:Using em/rem/vh/vw units over pixels -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Units and Responsive Design</title>
+    <style>
+
+        html{
+            font-size: 25px;
+        }
+      .container{
+        font-size:10px ;
+        text-align: center;
+        border: 2px solid black;
+
+
+        /* viewport height vh and viewport width vw are two different concepts. viewport means thing that is 
+        being viewd. therefor to set automatically height of the container to 100% of the 
+        screen we use 100vh and for width we use 100wh but we can also change from 0 - 100 according 
+        to needs
+         */
+         height:100vh;
+         width:100vw;
+
+
+      }
+
+      #first{
+        /* em is a size unit that means it is just like pixel px but behaves in a different manner. It 
+        calculates the size of the font by doing 10 times the size of the container. That means 3em
+        means 3*10(10 here is the size of the container)=30px and when the size of the conatiner is
+        changes so does that of the font.   */
+        /* font-size: 3em;  */
+
+
+        /* em behaves differently when used with padding it changes computes the value by multiplying 
+        the value given by the font size 3*30(thirty here is computed previously)=90px */
+
+        /* padding:3em; */
+
+      }
+
+
+      #second{
+        
+        /* Rem behaves differently from em as em is dependent on its parent containers font size rem does not.
+        Here I have placed html above in this style sheet and marked font-size as 25. When computing
+        the px of rem we simply multiply the value given with explicitly mentioned font size in html 
+        class or by default value. 3*25=75.  */
+        /* font-size: 3rem; */
+
+        
+        /* Same is the case with padding or margin */
+
+        /* padding: 3rem; */
+
+      }
+
+      #Third{
+
+
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1 id="first"> This is First Heading</h1>
+        <h1 id="second"> This is second heading</h1>
+        <h1 id="Third"> This is third heading</h1>
+        
+    </div>
+</body>
+</html>

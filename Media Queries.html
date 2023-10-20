@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box{
+               
+            text-align: centre;
+            background-color: aqua;
+            border: 2px solid black;
+            font-size: 70px;
+            display:none;
+
+        }
+
+
+        /* media query is like an if condition when the condition meets fire this css  */
+        /* There are many types of media only screen restricts media query to work for screens only */
+
+        @media only screen and (max-width:300px){
+
+            #box1{
+                display:block;
+                background-color: bisque;
+            }
+        }
+
+         @media only screen and (min-width:300px) and (max-width:500px){
+
+            #box2{
+                display:block;
+                background-color: brown;
+            }
+        }
+
+        @media only screen and (min-width:500px) and (max-width:800px){
+
+            #box3{
+                display:block;
+                background-color: rgb(165, 42, 110);
+            }
+        }
+
+
+        @media only screen and (min-width:800px) {
+
+            #box3{
+                display:block;
+                background-color: rgb(0, 0, 0);
+            }
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">I am iphone</div>
+    <div class="box" id="box2">I am tablet</div>
+    <div class="box" id="box3">I am pc</div>
+    <div class="box" id="box4">I am widescreen pc</div>
+</body>
+</html>
